@@ -58,6 +58,7 @@
         > li {
             display: inline-block;
             position: relative;
+            margin-right: 55px;
             &:not(:nth-last-child(2)) {
                 margin-right: 55px;
                 @include breakpoint(max-lg-device) {

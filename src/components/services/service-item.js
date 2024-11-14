@@ -15,7 +15,7 @@ function ServiceItem({ service }) {
             <div className={classes.add__action}>
                 <h2 className="title mb-0">
                     {/* <Link href={linkPath}>{service?.title}</Link> */}
-                    <Link href={''}>{service?.title}</Link>
+                    <Link href="">{service?.title}</Link>
                 </h2>
                 {/* <div className={classes.icon}>
                     <Link href="mailto://info@example.com" passHref>

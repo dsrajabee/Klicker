@@ -32,7 +32,7 @@ function BannerThree({ bannerThreeItems }) {
                                         {bannerThreeItem?.excerpt}
                                     </p>
                                     <Link
-                                        href={'#'}
+                                        href="#"
                                         // href={`${bannerThreeItem.path}`}
                                         className={classes.link__btn}
                                     >

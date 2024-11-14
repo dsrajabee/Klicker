@@ -66,7 +66,7 @@ function Header() {
                                 <div className="header-logo">
                                     <Link href="/" className={classes.logo}>
                                         <img
-                                            width={'70%'}
+                                            width="70%"
                                             src="/images/logo.jpg"
                                             alt="Logo"
                                         />
@@ -187,7 +187,6 @@ function Header() {
                                                 <span>Contact</span>
                                             </Link>
                                         </li>
-                                        <li></li>
                                     </ul>
                                 </nav>
                             </Col>
