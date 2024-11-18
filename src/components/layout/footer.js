@@ -166,7 +166,7 @@ function Footer({ footerItems }) {
                                 <Col md={{ span: 6 }} sm={{ span: 8 }}>
                                     <div className={classes.copyright}>
                                         <span className={classes.text}>
-                                            © {new Date().getFullYear()} Kilcker
+                                            © {new Date().getFullYear()} Klicker
                                             Innovations. All Rights Reserved.
                                             {/* <span className={classes.icon}>
                                                 <FaIcons.FaHeart />
