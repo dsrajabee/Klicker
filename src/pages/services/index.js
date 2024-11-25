@@ -37,6 +37,7 @@ function ServicePage({
                 subTitle="What we do"
                 title="Our Services"
                 desc=" We provide a wide range of services to help you grow your business."
+                imageClass="page_banner__bg page_banner__bg_2"
             />
             <AboutTwo aboutItemsTwo={aboutItemsTwo} />
             <AllServices

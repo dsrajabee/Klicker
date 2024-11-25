@@ -88,7 +88,7 @@ function TeamTwo({ teamItemsTwo, settings }) {
                                                     }
                                                 >
                                                     <Link
-                                                        href="mailto://info@example.com"
+                                                        href="mailto://akashvarmaviruman@gmail.com"
                                                         className={
                                                             classes.mail_link
                                                         }

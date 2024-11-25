@@ -30,6 +30,7 @@ function OurClients({
                 subTitle="What we do"
                 title="Our working Process"
                 desc="Customized IT solutions designed with accuracy, creativity, and teamwork to empower client success."
+                imageClass="page_banner__bg page_banner__bg_3"
             />
             <BannerFour
                 bannerFourItems={bannerFourItems}

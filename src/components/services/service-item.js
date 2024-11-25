@@ -18,7 +18,7 @@ function ServiceItem({ service }) {
                     <Link href="">{service?.title}</Link>
                 </h2>
                 {/* <div className={classes.icon}>
-                    <Link href="mailto://info@example.com" passHref>
+                    <Link href="mailto://akashvarmaviruman@gmail.com" passHref>
                         <IoAddSharp />
                     </Link>
                 </div> */}

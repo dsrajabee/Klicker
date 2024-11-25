@@ -36,6 +36,7 @@ function AboutPage({
                 subTitle="What we do"
                 title="About us"
                 desc=" Kilcker Innovations is a digital agency that specializes in web design, web development, and digital marketing."
+                imageClass="page_banner__bg page_banner__bg_1"
             />
             <AboutOne aboutItems={aboutItems} />
             <BannerThree bannerThreeItems={bannerThreeItems} />

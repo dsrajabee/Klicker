@@ -516,13 +516,25 @@ iframe {
 .page {
     &_banner {
         &__bg {
-            background-image: url('/images/breadcrumb/bg/1.jpg');
+            // background-image: url('/images/breadcrumb/bg/1.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             min-height: 460px;
             display: flex;
             align-items: center;
+        }
+        &__bg_1 {
+            background-image: url('/images/breadcrumb/bg/1.jpg');
+        }
+        &__bg_2 {
+            background-image: url('/images/breadcrumb/bg/2.jpg');
+        }
+        &__bg_3 {
+            background-image: url('/images/breadcrumb/bg/3.jpg');
+        }
+        &__bg_4 {
+            background-image: url('/images/breadcrumb/bg/4.jpg');
         }
     }
     &_subtitle {

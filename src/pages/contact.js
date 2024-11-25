@@ -20,6 +20,7 @@ function ContactPage({ contactItems, newsletterItems, footerItems }) {
                 subTitle="Contact us"
                 title="Get in Touch"
                 desc="Contact us to experience customized IT services that elevate performance, streamline processes, and accelerate business growth"
+                imageClass="page_banner__bg page_banner__bg_4"
             />
             <Contact contactItems={contactItems} />
             {/* <Newsletter newsletterItems={newsletterItems} /> */}

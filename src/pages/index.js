@@ -47,24 +47,10 @@ function HomePage({
             <Hero heroItems={heroItems} />
             <BannerOne bannerItems={bannerItems} />
             <AboutOne aboutItems={aboutItems} />
-            {/* <LatestProject
-                projects={projects}
-                projectSectionItems={projectSectionItems}
-            /> */}
-            {/* <BrandOne brandItems={brandItems} /> */}
             <HomePageServices
                 services={services}
                 serviceSectionItems={serviceSectionItems}
             />
-            {/* <BannerTwo bannerTwoItems={bannerTwoItems} /> */}
-            {/* <Counter /> */}
-            {/* <Team teamItems={teamItems} teamSectionItems={teamSectionItems} />
-            <Testimonial
-                testimonialItems={testimonialItems}
-                testimonialSectionItems={testimonialSectionItems}
-            /> */}
-            {/* <LatestBlog blogs={blogs} blogSectionItems={blogSectionItems} /> */}
-            {/* <Newsletter newsletterItems={newsletterItems} /> */}
             <Footer footerItems={footerItems} />
         </>
     );

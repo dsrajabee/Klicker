@@ -26,8 +26,8 @@ infoList: [
         {
             id: 'infoList-03',
             listText: 'Email:',
-            path: 'mailto://info@example.com',
-            listValue: 'info@example.com',
+            path: 'mailto://akashvarmaviruman@gmail.com',
+            listValue: 'akashvarmaviruman@gmail.com',
         },
         # {
         #     id: 'infoList-04',
