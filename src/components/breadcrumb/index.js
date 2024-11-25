@@ -28,6 +28,7 @@ Breadcrumb.propTypes = {
     subTitle: PropTypes.string,
     title: PropTypes.string,
     desc: PropTypes.string,
+    imageClass: PropTypes.string,
 };
 
 export default Breadcrumb;
