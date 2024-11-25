@@ -128,9 +128,14 @@
         z-index: -1;
     }
 
-    a {
+    button {
         color: #fff;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 .title {

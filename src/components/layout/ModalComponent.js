@@ -13,6 +13,7 @@ function ModalComponent({ show, handleClose, content }) {
                 <div className={styles.modalHeader}>
                     <h2>{content.sectionTitle || 'Expanded View'}</h2>
                     <button
+                        type="button"
                         onClick={handleClose}
                         className={styles.closeButton}
                     >
@@ -30,6 +31,7 @@ function ModalComponent({ show, handleClose, content }) {
                 </div>
                 <div className={styles.modalFooter}>
                     <button
+                        type="button"
                         onClick={handleClose}
                         className={styles.closeButton}
                     >
@@ -44,7 +46,11 @@ function ModalComponent({ show, handleClose, content }) {
 ModalComponent.propTypes = {
     show: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    content: PropTypes.object.isRequired,
+    content: PropTypes.shape({
+        sectionTitle: PropTypes.string,
+        sectionSubtitle: PropTypes.string,
+        sectionDesc: PropTypes.string,
+    }).isRequired,
 };
 
 export default ModalComponent;

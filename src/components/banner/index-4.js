@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import classes from './banner-4.module.scss';
 import ModalComponent from '../layout/ModalComponent';
-// import ModalComponent from './ModalComponent';
 
 function BannerFour({ bannerFourItems, bannerSection }) {
     const [showModal, setShowModal] = useState(false);
@@ -62,15 +61,15 @@ function BannerFour({ bannerFourItems, bannerSection }) {
                                     <p className={classes.desc}>
                                         {bannerFourItem?.excerpt}
                                     </p>
-                                    <a
-                                        href="#"
+                                    <button
+                                        type="button"
                                         onClick={(e) => {
                                             e.preventDefault();
                                             handleShowModal(bannerFourItem);
                                         }}
                                     >
                                         View More
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </Col>
@@ -87,8 +86,31 @@ function BannerFour({ bannerFourItems, bannerSection }) {
 }
 
 BannerFour.propTypes = {
-    bannerFourItems: PropTypes.array.isRequired,
-    bannerSection: PropTypes.array.isRequired,
+    bannerFourItems: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired,
+            dynamicClassName: PropTypes.string,
+            dataCount: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number,
+            ]),
+            title: PropTypes.string,
+            excerpt: PropTypes.string,
+            sectionTitle: PropTypes.string,
+            sectionSubtitle: PropTypes.string,
+            sectionDesc: PropTypes.string,
+        })
+    ).isRequired,
+    bannerSection: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired,
+            sectionSubtitle: PropTypes.string,
+            sectionTitle: PropTypes.string,
+            sectionDesc: PropTypes.string,
+        })
+    ).isRequired,
 };
 
 export default BannerFour;
