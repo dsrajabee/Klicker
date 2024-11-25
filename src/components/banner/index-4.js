@@ -1,8 +1,21 @@
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import classes from './banner-4.module.scss';
+import ModalComponent from '../layout/ModalComponent';
+// import ModalComponent from './ModalComponent';
 
 function BannerFour({ bannerFourItems, bannerSection }) {
+    const [showModal, setShowModal] = useState(false);
+    const [modalContent, setModalContent] = useState({});
+
+    const handleShowModal = (item) => {
+        setModalContent(item);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => setShowModal(false);
+
     return (
         <div className={`${classes.py__140}`}>
             <Container>
@@ -49,19 +62,33 @@ function BannerFour({ bannerFourItems, bannerSection }) {
                                     <p className={classes.desc}>
                                         {bannerFourItem?.excerpt}
                                     </p>
+                                    <a
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleShowModal(bannerFourItem);
+                                        }}
+                                    >
+                                        View More
+                                    </a>
                                 </div>
                             </div>
                         </Col>
                     ))}
                 </Row>
             </Container>
+            <ModalComponent
+                show={showModal}
+                handleClose={handleCloseModal}
+                content={modalContent}
+            />
         </div>
     );
 }
 
 BannerFour.propTypes = {
-    bannerFourItems: PropTypes.instanceOf(Object).isRequired,
-    bannerSection: PropTypes.instanceOf(Object).isRequired,
+    bannerFourItems: PropTypes.array.isRequired,
+    bannerSection: PropTypes.array.isRequired,
 };
 
 export default BannerFour;

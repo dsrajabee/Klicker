@@ -25,6 +25,14 @@ function AboutOne({ aboutItems }) {
                             </div>
                         </div>
                         <Row>
+                            <p
+                                className={classes.section__below}
+                                dangerouslySetInnerHTML={{
+                                    __html: aboutItem.aboutBelow,
+                                }}
+                            />
+                        </Row>
+                        <Row>
                             <Col lg={{ span: 6 }}>
                                 <div className={classes.img__wrap}>
                                     <div className={classes.pattern}>
@@ -44,29 +52,6 @@ function AboutOne({ aboutItems }) {
                             </Col>
                             <Col lg={{ span: 6 }}>
                                 <div className={classes.content}>
-                                    {/* <div className={classes.experience}>
-                                        <div
-                                            className={
-                                                classes.experience_content
-                                            }
-                                        >
-                                            <span className={classes.year}>
-                                                {aboutItem?.experienceYear}
-                                            </span>
-                                            <h2
-                                                className={classes.our_progress}
-                                                dangerouslySetInnerHTML={{
-                                                    __html: aboutItem.ourProgress,
-                                                }}
-                                            />
-                                        </div>
-                                        <div className={classes.experience_img}>
-                                            <img
-                                                src={aboutItem?.experienceImage}
-                                                alt={aboutItem?.experienceAlt}
-                                            />
-                                        </div>
-                                    </div> */}
                                     <h3 className={classes.subtitle}>
                                         {aboutItem?.aboutSubtitle}
                                     </h3>

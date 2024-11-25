@@ -17,7 +17,7 @@
 }
 .section {
     @include breakpoint(min-md-device) {
-        padding-bottom: 70px;
+        padding-bottom: 30px;
     }
     @include breakpoint(max-sm-device) {
         padding-bottom: 30px;
@@ -68,6 +68,9 @@
                 transform: translateY(-50%);
             }
         }
+    }
+    &__below {
+        margin: 20px 0 50px;
     }
     &__desc {
         max-width: 440px;

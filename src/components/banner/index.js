@@ -17,7 +17,7 @@ function BannerOne({ bannerItems }) {
                                 className={`${bannerItem.bannerBG
                                     .split(' ')
                                     .map((item) => classes[item])
-                                    .join(' ')}`}
+                                    .join(' ')} ${classes.equalHeight}`}
                             >
                                 <div className={classes.content}>
                                     <h2 className={classes.title}>
