@@ -51,9 +51,8 @@ ModalComponent.propTypes = {
     show: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     content: PropTypes.shape({
-        sectionTitle: PropTypes.string,
-        sectionSubtitle: PropTypes.string,
-        sectionDesc: PropTypes.string,
+        title: PropTypes.string,
+        excerpt: PropTypes.string,
     }).isRequired,
 };
 

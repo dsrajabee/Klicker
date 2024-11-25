@@ -17,7 +17,7 @@ function BannerFour({ bannerFourItems, bannerSection }) {
                 result += '<br>';
                 count = 0;
             }
-            result += word + ' ';
+            result += `${word} `;
             count += word.length + 1;
         });
 
