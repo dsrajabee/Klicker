@@ -14,6 +14,7 @@ import Newsletter from '../components/newsletter/newsletter';
 import Team from '../components/team';
 import Testimonial from '../components/testimonial';
 import { getAllItems, getFeaturedItems } from '../lib/items-util';
+// Comments
 
 function HomePage({
     heroItems,
