@@ -11,7 +11,13 @@ function ModalComponent({ show, handleClose, content }) {
         <div className={styles.modalOverlay}>
             <div className={styles.modal}>
                 <div className={styles.modalHeader}>
-                    <h2>{content.sectionTitle || 'Expanded View'}</h2>
+                    {/* <div>{JSON.stringify(content)}</div> */}
+                    {/* <h2>{content.title || 'Expanded View'}</h2> */}
+                    <h2
+                        dangerouslySetInnerHTML={{
+                            __html: content.title,
+                        }}
+                    />
                     <button
                         type="button"
                         onClick={handleClose}
@@ -21,15 +27,13 @@ function ModalComponent({ show, handleClose, content }) {
                     </button>
                 </div>
                 <div className={styles.modalBody}>
-                    <h2>{content.sectionTitle}</h2>
-                    <p>{content.sectionSubtitle}</p>
-                    <div
+                    <p
                         dangerouslySetInnerHTML={{
-                            __html: content.sectionDesc,
+                            __html: content.excerpt,
                         }}
                     />
                 </div>
-                <div className={styles.modalFooter}>
+                {/* <div className={styles.modalFooter}>
                     <button
                         type="button"
                         onClick={handleClose}
@@ -37,7 +41,7 @@ function ModalComponent({ show, handleClose, content }) {
                     >
                         Close
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -8,6 +8,22 @@ function BannerFour({ bannerFourItems, bannerSection }) {
     const [showModal, setShowModal] = useState(false);
     const [modalContent, setModalContent] = useState({});
 
+    const insertBreaks = (text, maxLength) => {
+        let result = '';
+        let count = 0;
+
+        text.split(' ').forEach((word) => {
+            if (count + word.length + 1 > maxLength) {
+                result += '<br>';
+                count = 0;
+            }
+            result += word + ' ';
+            count += word.length + 1;
+        });
+
+        return result.trim();
+    };
+
     const handleShowModal = (item) => {
         setModalContent(item);
         setShowModal(true);
@@ -52,14 +68,28 @@ function BannerFour({ bannerFourItems, bannerSection }) {
                                     className={classes.content}
                                     data-count={`${bannerFourItem?.dataCount}`}
                                 >
-                                    <h2
+                                    {/* <h2
                                         className={classes.title}
                                         dangerouslySetInnerHTML={{
                                             __html: bannerFourItem?.title,
                                         }}
+                                    /> */}
+                                    <h2
+                                        className={classes.title}
+                                        dangerouslySetInnerHTML={{
+                                            __html: insertBreaks(
+                                                bannerFourItem?.title || '',
+                                                16
+                                            ),
+                                        }}
                                     />
                                     <p className={classes.desc}>
-                                        {bannerFourItem?.excerpt}
+                                        {bannerFourItem?.excerpt?.length > 80
+                                            ? `${bannerFourItem.excerpt.substring(
+                                                  0,
+                                                  80
+                                              )}...`
+                                            : bannerFourItem.excerpt}
                                     </p>
                                     <button
                                         type="button"
