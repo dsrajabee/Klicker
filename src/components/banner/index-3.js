@@ -31,16 +31,6 @@ function BannerThree({ bannerThreeItems }) {
                                     <p className={classes.desc}>
                                         {bannerThreeItem?.excerpt}
                                     </p>
-                                    <Link
-                                        href="#"
-                                        // href={`${bannerThreeItem.path}`}
-                                        className={classes.link__btn}
-                                    >
-                                        {bannerThreeItem?.btnText}
-                                        <span className={classes.icon}>
-                                            <IoArrowForwardOutline />
-                                        </span>
-                                    </Link>
                                 </div>
                             </div>
                         </Col>
