@@ -4,13 +4,13 @@ import * as FaIcons from 'react-icons/fa';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import classes from './footer.module.scss';
-
+import { IoAddSharp } from 'react-icons/io5';
 function Footer({ footerItems }) {
     return (
         <footer>
             {footerItems?.map((footerItem) => (
                 <Fragment key={footerItem.id}>
-                    {/* <div className={`${classes.bg}`}>
+                    <div className={`${classes.bg}`}>
                         <Container>
                             <Row>
                                 <Col lg={{ span: 3 }}>
@@ -21,26 +21,60 @@ function Footer({ footerItems }) {
                                                 alt={footerItem?.footerLogoAlt}
                                             />
                                         </Link>
-                                        <p
-                                            className={classes.desc}
-                                            dangerouslySetInnerHTML={{
-                                                __html: footerItem?.excerpt,
-                                            }}
-                                        />
-                                        <div className={classes.inquary}>
+                                        <div className={classes.widget__item}>
                                             <h2
+                                                className={
+                                                    classes.widget__title
+                                                }
+                                            >
+                                                {footerItem?.contactInfoTitle}
+                                            </h2>
+                                            <div
+                                                className={`pb-25 ${classes.widget__info}`}
+                                            >
+                                                <p
+                                                    className={
+                                                        classes.widget_address
+                                                    }
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: footerItem?.widgetAddress,
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className={classes.inquary}>
+                                            {/* <h2
                                                 className={classes.inquary_info}
                                             >
                                                 {footerItem?.inquary}
-                                            </h2>
-                                            <Link
-                                                href="tel://+12345-879-854"
-                                                className={
-                                                    classes.inquary_number
-                                                }
-                                            >
-                                                {footerItem?.inquaryNumber}
-                                            </Link>
+                                            </h2> */}
+                                            <div>
+                                                <Link
+                                                    href={`tel://${footerItem?.inquaryNumber}`}
+                                                    className={
+                                                        classes.inquary_number
+                                                    }
+                                                >
+                                                    {/* <FaIcons.FaPhone
+                                                        className={
+                                                            classes.inquary_phoneicon
+                                                        }
+                                                    /> */}
+                                                    {footerItem?.inquaryNumber}
+                                                </Link>
+                                            </div>
+                                            <div>
+                                                <Link
+                                                    href="mailto://akashvarmaviruman@gmail.com"
+                                                    className={
+                                                        classes.inquary_number
+                                                    }
+                                                >
+                                                    {/* <FaIcons.FaEnvelope /> */}
+                                                    akashvarmaviruman@gmail.com
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>
@@ -70,81 +104,19 @@ function Footer({ footerItems }) {
                                     </div>
                                 </Col>
                                 <Col
-                                    lg={{ span: 3 }}
-                                    sm={{ span: 6 }}
+                                    lg={{ span: 6 }}
                                     className="ps-lg-50 pt-40 pt-lg-0"
                                 >
-                                    <div className={classes.widget__item}>
-                                        <h2 className={classes.widget__title}>
-                                            {footerItem?.quickLinkTitle}
-                                        </h2>
-                                        <ul className={classes.widget__list}>
-                                            {footerItem?.quickLinkList?.map(
-                                                (item) => (
-                                                    <li key={item.id}>
-                                                        <Link
-                                                            href={`/${item.path}`}
-                                                        >
-                                                            {item.title}
-                                                        </Link>
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    </div>
-                                </Col>
-                                <Col
-                                    xl={{ span: 3 }}
-                                    lg={{ span: 4 }}
-                                    className="pt-40 pt-lg-0"
-                                >
-                                    <div className={classes.widget__item}>
-                                        <h2 className={classes.widget__title}>
-                                            {footerItem?.contactInfoTitle}
-                                        </h2>
-                                        <div
-                                            className={`pb-25 ${classes.widget__info}`}
-                                        >
-                                            <p
-                                                className={
-                                                    classes.widget_address
-                                                }
-                                                dangerouslySetInnerHTML={{
-                                                    __html: footerItem?.widgetAddress,
-                                                }}
-                                            />
-                                            <span
-                                                className={
-                                                    classes.widget_number
-                                                }
-                                            >
-                                                {footerItem?.widgetNumber}
-                                            </span>
-                                        </div>
-                                        <div className={classes.widget__info}>
-                                            <p
-                                                className={
-                                                    classes.widget_address
-                                                }
-                                                dangerouslySetInnerHTML={{
-                                                    __html: footerItem?.additionWidgetAddress,
-                                                }}
-                                            />
-                                            <span
-                                                className={
-                                                    classes.widget_number
-                                                }
-                                            >
-                                                {
-                                                    footerItem?.additionWidgetNumber
-                                                }
-                                            </span>
-                                        </div>
+                                    <div>
+                                        <img
+                                            src={footerItem?.footerMap}
+                                            alt={footerItem?.footerMapAlt}
+                                        />
                                     </div>
                                 </Col>
                             </Row>
                         </Container>
-                    </div> */}
+                    </div>
                     <div className={classes.bottom}>
                         <Container>
                             <Row>

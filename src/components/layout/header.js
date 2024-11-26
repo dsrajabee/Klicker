@@ -184,7 +184,7 @@ function Header() {
                                                         : ''
                                                 }
                                             >
-                                                <span>Contact</span>
+                                                <span>Contact Us</span>
                                             </Link>
                                         </li>
                                     </ul>

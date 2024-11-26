@@ -1,41 +1,42 @@
 ---
 id: 'footer-01'
-footerLogo: '/images/logo/white.png'
+footerLogo: '/images/logo.jpg'
 footerLogoAlt: 'Footer Logo'
-excerpt: 'Construction of itself, because it is are  <br/> but because some proper style design is occur in toil and pain pleasure'
+footerMap: '/images/footer/bg/map.png'
+footerMapAlt: 'Footer Logo'
+excerpt: 'Delivering innovative IT services that enhance efficiency, drive growth, and transform businesses with cutting-edge technology'
 inquary: 'For inquary'
-inquaryNumber: '+12345 879 854'
-informationTitle: 'Information'
+inquaryNumber: '+91 90033 05183'
+informationTitle: 'Quick Links'
 informationList:
     [
         { id: 'informationList-01', title: 'About us', path: 'about' },
-        { id: 'informationList-02', title: 'Our Services', path: 'services' },
+        { id: 'informationList-02', title: 'Services', path: 'services' },
         {
             id: 'informationList-03',
-            title: 'Recent Projects',
-            path: 'projects',
+            title: 'Our Working Process',
+            path: 'our-working-process',
         },
-        { id: 'informationList-04', title: 'Our Team', path: 'our-team' },
-        { id: 'informationList-05', title: 'Contact us', path: 'contact' },
+        { id: 'informationList-04', title: 'Contact us', path: 'contact' },
     ]
-quickLinkTitle: 'Quick Links'
-quickLinkList:
-    [
-        { id: 'quickLinkList-01', title: 'Support Center', path: 'contact' },
-        { id: 'quickLinkList-02', title: 'Offers & Promotion', path: 'about' },
-        {
-            id: 'quickLinkList-03',
-            title: 'Terms & Conditions',
-            path: 'contact',
-        },
-        { id: 'quickLinkList-04', title: 'Payment Method', path: 'contact' },
-        { id: 'quickLinkList-05', title: 'Clients & Reviews', path: 'about' },
-    ]
+# quickLinkTitle: 'Quick Links'
+# quickLinkList:
+#     [
+#         { id: 'quickLinkList-01', title: 'Support Center', path: 'contact' },
+#         { id: 'quickLinkList-02', title: 'Offers & Promotion', path: 'about' },
+#         {
+#             id: 'quickLinkList-03',
+#             title: 'Terms & Conditions',
+#             path: 'contact',
+#         },
+#         { id: 'quickLinkList-04', title: 'Payment Method', path: 'contact' },
+#         { id: 'quickLinkList-05', title: 'Clients & Reviews', path: 'about' },
+#     ]
 contactInfoTitle: 'Contact Info'
-widgetAddress: '215 Central Road, North Street Central Park, <span class="text-primary">New York, USA</span>'
-widgetNumber: '+12345 698 745 / +32145 852 785'
-additionWidgetAddress: '75, Victoriya Street, New Town Park Road, <span class="text-primary">Sydney, Australia</span>'
-additionWidgetNumber: '+98745 258 102 / +98745 612 301'
+widgetAddress: 'Madurai, <span class="text-primary">Tamil Nadu, India</span>'
+widgetNumber: '+91 90033 05183'
+# additionWidgetAddress: '75, Victoriya Street, New Town Park Road, <span class="text-primary">Sydney, Australia</span>'
+# additionWidgetNumber: '+98745 258 102 / +98745 612 301'
 socialList:
     [
         {
