@@ -140,23 +140,24 @@ function Header() {
                                             >
                                                 <li>
                                                     <Link href="#">
+                                                        Web Application
+                                                        Development
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="#">
+                                                        Mobile Application
+                                                        Development
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="#">
                                                         IT Consulting
                                                     </Link>
                                                 </li>
                                                 <li>
                                                     <Link href="#">
-                                                        Cloud Solutions
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="#">
-                                                        Software Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="#">
-                                                        Technical Support &
-                                                        Maintenance
+                                                        Digital Marketing
                                                     </Link>
                                                 </li>
                                             </ul>

@@ -21,22 +21,22 @@ export const OffcanvasData = [
             {
                 id: 'submenu-01',
                 link: '#',
-                text: 'IT Consulting',
+                text: 'Web Application Development',
             },
             {
                 id: 'submenu-02',
                 link: '#',
-                text: 'Cloud Solutions',
+                text: 'Mobile Application Development',
             },
             {
                 id: 'submenu-03',
                 link: '#',
-                text: 'Software Development',
+                text: 'IT Consulting',
             },
             {
                 id: 'submenu-04',
                 link: '#',
-                text: 'Technical Support & Maintenance',
+                text: 'Digital Marketing',
             },
         ],
     },
