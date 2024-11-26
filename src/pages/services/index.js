@@ -44,18 +44,10 @@ function ServicePage({
                 services={services}
                 serviceSectionItems={serviceSectionItems}
             />
-            {/* <BannerTwo bannerTwoItems={bannerTwoItems} /> */}
-            {/* <BrandOne brandItems={brandItems} /> */}
             <BannerFour
                 bannerFourItems={bannerFourItems}
                 bannerSection={bannerSection}
             />
-            ;
-            {/* <Testimonial
-                testimonialItems={testimonialItems}
-                testimonialSectionItems={testimonialSectionItems}
-            />
-            <Newsletter newsletterItems={newsletterItems} /> */}
             <Footer footerItems={footerItems} />
         </>
     );

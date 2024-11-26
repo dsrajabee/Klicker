@@ -3,6 +3,7 @@ import { Col } from 'react-bootstrap';
 import RichText from '../../rich-text';
 import classes from './index.module.scss';
 import OurServices from './our-services';
+import * as FaIcons from 'react-icons/fa';
 
 function ServiceContent({ service, richTexts, ourServices }) {
     const imagePath = `/images/services/${service?.slug}/${service?.largeImage}`;
@@ -21,8 +22,29 @@ function ServiceContent({ service, richTexts, ourServices }) {
                 <h3 className={classes.subtitle}>{service?.detailSubTitle}</h3>
                 <p className={classes.desc}>{service?.detailDesc}</p>
             </div>
-            <RichText richTexts={richTexts} />
-            <OurServices ourServices={ourServices} />
+
+            <div className={classes.contentdetails}>
+                <h2 className={classes.title}>
+                    {service?.projectContentTitle}
+                </h2>
+                <ul className={classes.list}>
+                    {service?.listItem?.map((singleItem) => {
+                        const CheckIcon = FaIcons[singleItem.checkIcon];
+                        return (
+                            <li key={singleItem.id}>
+                                <div className={classes.list_icon}>
+                                    <CheckIcon />
+                                </div>
+                                <div className={classes.list_text}>
+                                    <span>{singleItem.text}</span>
+                                </div>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+            {/* <RichText richTexts={richTexts} /> */}
+            {/* <OurServices ourServices={ourServices} /> */}
         </Col>
     );
 }

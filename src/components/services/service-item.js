@@ -9,13 +9,17 @@ function ServiceItem({ service }) {
 
     return (
         <div className="service-item">
-            {/* <Link href={linkPath} className={classes.img}> */}
-            <img className="img-full" src={imagePath} alt={service?.title} />
-            {/* </Link> */}
+            <Link href={linkPath} className={classes.img}>
+                <img
+                    className="img-full"
+                    src={imagePath}
+                    alt={service?.title}
+                />
+            </Link>
             <div className={classes.add__action}>
                 <h2 className="title mb-0">
-                    {/* <Link href={linkPath}>{service?.title}</Link> */}
-                    <Link href="">{service?.title}</Link>
+                    <Link href={linkPath}>{service?.title}</Link>
+                    {/* <Link href="">{service?.title}</Link> */}
                 </h2>
                 {/* <div className={classes.icon}>
                     <Link href="mailto://akashvarmaviruman@gmail.com" passHref>

@@ -16,13 +16,7 @@ function Error404Page({ newsletterItems, footerItems }) {
                     content=" Kilcker Innovations is a digital agency that specializes in web design, web development, and digital marketing."
                 />
             </Head>
-            {/* <Breadcrumb
-                subTitle="Not Found"
-                title="404"
-                desc="Construction of itself, because it is pain some proper style design occur are pleasure"
-            /> */}
             <Error404 />
-            {/* <Newsletter newsletterItems={newsletterItems} /> */}
             <Footer footerItems={footerItems} />
         </>
     );

@@ -5,6 +5,7 @@ import Newsletter from '../../components/newsletter/newsletter';
 import Footer from '../../components/layout/footer';
 import ServiceDetail from '../../components/services/service-detail';
 import { getAllItems, getItemData, getItemsFiles } from '../../lib/items-util';
+import * as FaIcons from 'react-icons/fa';
 
 function ServiceDetailsPage({
     service,
@@ -28,6 +29,7 @@ function ServiceDetailsPage({
                 subTitle="Services"
                 title={service.title}
                 desc="Our services are designed to help you grow your business and increase your online presence. We offer a wide range of services, including web design, web development, and digital marketing."
+                imageClass="page_banner__bg page_banner__bg_2"
             />
             <ServiceDetail
                 sidebarList={sidebarList}

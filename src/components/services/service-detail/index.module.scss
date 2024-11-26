@@ -18,6 +18,45 @@
 .content {
     padding-top: 45px;
 }
+.contentdetails {
+    .title {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .desc {
+        font-size: 18px;
+        max-width: 335px;
+        margin-bottom: 25px;
+    }
+    .list {
+        margin-top: 25px;
+        li {
+            // max-width: 360px;
+            font-size: 18px;
+            display: flex;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+        &_icon {
+            color: $primary;
+        }
+        &_text {
+            padding-left: 20px;
+            margin-top: -5px;
+        }
+        &_02 {
+            li {
+                display: inline-block;
+                span {
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
 .title {
     margin-bottom: 25px;
     font-size: 60px;

@@ -40,12 +40,12 @@ function ServiceSidebar({ sidebarList, servicesSidebar }) {
                             )}
                         </ul>
                     </div> */}
-                    <div className={`${classes.sidebar_widget__banner}`}>
+                    {/* <div className={`${classes.sidebar_widget__banner}`}>
                         <img
                             src={serviceSidebar?.widgetBanner}
                             alt={serviceSidebar?.widgetBannerAlt}
                         />
-                    </div>
+                    </div> */}
                 </div>
             ))}
         </Col>
