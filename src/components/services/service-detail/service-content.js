@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { Col } from 'react-bootstrap';
-import RichText from '../../rich-text';
-import classes from './index.module.scss';
-import OurServices from './our-services';
 import * as FaIcons from 'react-icons/fa';
+import classes from './index.module.scss';
 
 function ServiceContent({ service, richTexts, ourServices }) {
     const imagePath = `/images/services/${service?.slug}/${service?.largeImage}`;
@@ -43,8 +41,6 @@ function ServiceContent({ service, richTexts, ourServices }) {
                     })}
                 </ul>
             </div>
-            {/* <RichText richTexts={richTexts} /> */}
-            {/* <OurServices ourServices={ourServices} /> */}
         </Col>
     );
 }
