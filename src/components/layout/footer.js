@@ -4,7 +4,6 @@ import * as FaIcons from 'react-icons/fa';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import classes from './footer.module.scss';
-import { IoAddSharp } from 'react-icons/io5';
 function Footer({ footerItems }) {
     return (
         <footer>
