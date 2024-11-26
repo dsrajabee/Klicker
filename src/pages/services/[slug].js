@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Breadcrumb from '../../components/breadcrumb';
-import Newsletter from '../../components/newsletter/newsletter';
 import Footer from '../../components/layout/footer';
 import ServiceDetail from '../../components/services/service-detail';
 import { getAllItems, getItemData, getItemsFiles } from '../../lib/items-util';
-import * as FaIcons from 'react-icons/fa';
 
 function ServiceDetailsPage({
     service,
@@ -38,7 +36,6 @@ function ServiceDetailsPage({
                 ourServices={ourServices}
                 servicesSidebar={servicesSidebar}
             />
-            {/* <Newsletter newsletterItems={newsletterItems} /> */}
             <Footer footerItems={footerItems} />
         </>
     );
