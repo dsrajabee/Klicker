@@ -4,6 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import classes from './footer.module.scss';
+
 function Footer({ footerItems }) {
     return (
         <footer>
