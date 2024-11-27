@@ -2,8 +2,38 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import classes from './index.module.scss';
-
+import { useState } from 'react';
 function Contact({ contactItems }) {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [status, setStatus] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('/api/sendEmail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('Email sent successfully!');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setStatus('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('An error occurred. Please try again later.');
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
     return (
         <main>
             {contactItems?.map((contactItem) => (
@@ -76,14 +106,17 @@ function Contact({ contactItems }) {
                                 <p className={`${classes.form_desc} mb-0`}>
                                     {contactItem?.formDesc}
                                 </p>
-                                <form className={classes.form}>
-                                    <div className={classes.form_group__input}>
+                                {status && <p className={classes.status_message}>{status}</p>}
+                                <form onSubmit={handleSubmit} className={classes.form}>
+                                <div className={classes.form_group__input}>
                                         <input
                                             type="text"
                                             name="name"
                                             id="name"
                                             placeholder="Your Name*"
                                             required
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             className={`${classes.form_input__field} me-30`}
                                         />
                                         <input
@@ -92,6 +125,8 @@ function Contact({ contactItems }) {
                                             id="email"
                                             placeholder="Your Email*"
                                             required
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             className={
                                                 classes.form_input__field
                                             }
@@ -99,7 +134,12 @@ function Contact({ contactItems }) {
                                     </div>
                                     <textarea
                                         type="text"
-                                        placeholder="Message"
+                                        name="message"
+                                        id="message"
+                                        placeholder="message"
+                                        required
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         className={`${classes.form_textarea__field} mt-30`}
                                     />
                                     <div className={classes.form_btn__wrap}>
@@ -107,9 +147,10 @@ function Contact({ contactItems }) {
                                             className={`${classes.btn} ${classes.btn_secondary} ${classes.btn_hover__primary}`}
                                             type="submit"
                                         >
-                                            {contactItem?.btnText}
+                                          {contactItem?.btnText || 'Send Message'}
                                         </button>
                                     </div>
+                                  
                                 </form>
                             </Col>
                             <Col lg={{ span: 6 }} className="ps-lg-50">
