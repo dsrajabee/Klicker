@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import classes from './banner.module.scss';
+// Comments
 
 function BannerOne({ bannerItems }) {
     return (
